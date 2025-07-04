@@ -1,0 +1,36 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "name": "Home",
+      "path": "#",
+      "hasChildren": true
+    },
+    {
+      "id": 2,
+      "name": "About",
+      "path": "/about"
+    },
+    {
+      "id": 3,
+      "name": "Services",
+      "path": "/services"
+    },
+    {
+      "id": 4,
+      "name": "Pages",
+      "path": "/pages",
+      "hasChildren": true
+    },
+    {
+      "id": 5,
+      "name": "News",
+      "path": "/news"
+    },
+    {
+      "id": 6,
+      "name": "Contact",
+      "path": "/contact"
+    }
+  ]
+}
