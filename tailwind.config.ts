@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        primary: "var(--primary)",
         background: {
           DEFAULT: "var(--background)",
           2: "var(--background2)",
@@ -20,6 +21,9 @@ const config: Config = {
           3: "var(--text3)",
         },
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        primary: ["Inter", "sans-serif"],
       },
     },
   },
