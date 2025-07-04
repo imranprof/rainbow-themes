@@ -3,7 +3,7 @@ import siteConfig from "@/config/siteConfig.json"
 
 const Header = () => {
   return (
-    <header>
+    <header className="inner-container">
       <TopBar />
       nav menu
     </header>
