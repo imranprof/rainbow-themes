@@ -1,0 +1,24 @@
+{
+  "site_info": {
+    "title": "Rainbow Themes",
+    "description": "",
+    "info": "Rainbow themes is a design agency based in Usa",
+    "logo": "/assets/imgs/logo/logo-1.png",
+    "logo_light": "/assets/imgs/logo/logo-light.png",
+    "logo_text": "Rainbow-theme",
+    "email": "support@gmail.com",
+    "mobile": "(406) 555-0120",
+    "address": {
+      "name": "15th Street, USA",
+      "link": ""
+    }
+  },
+  "footer_info": {
+    "copyright": {
+      "company": "Rainbow Themes",
+      "label": "© 2024",
+      "label_2": "All rights reserved",
+      "link": "https://rainbowthemes.net/"
+    }
+  }
+}
