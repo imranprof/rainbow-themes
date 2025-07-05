@@ -51,16 +51,16 @@ const TopBar = () => {
         </span>
         <span className="flex justify-center gap-[14px] ps-[19px] border-s border-border-3/15">
           <Link href={"#"}>
-            <FaFacebookF className="text-[#5163FF]" />
+            <FaFacebookF className="hover:text-[#5163FF]" />
           </Link>
           <Link href={"#"}>
-            <FaXTwitter />
+            <FaXTwitter className="hover:text-[#5163FF]" />
           </Link>
           <Link href={"#"}>
-            <FaInstagram />
+            <FaInstagram className="hover:text-[#5163FF]" />
           </Link>
           <Link href={"#"}>
-            <FaLinkedinIn />
+            <FaLinkedinIn className="hover:text-[#5163FF]" />
           </Link>
         </span>
       </div>

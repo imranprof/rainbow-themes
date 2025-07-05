@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center  whitespace-nowrap rounded-md  transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -22,9 +22,9 @@ const buttonVariants = cva(
         primaryBlue: "bg-[linear-gradient(0deg,#4C5DEF,#4C5DEF),radial-gradient(64.58%_59%_at_37.13%_12%,rgba(255,255,255,0.427)_0%,rgba(255,255,255,0)_69.79%,rgba(255,255,255,0)_100%)] shadow-[4px_10px_20px_0px_#5163FF42,-3px_-4px_7px_0px_#FFFFFF26_inset]",
       },
       size: {
-        default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
+        default: "",
+        sm: "",
+        lg: "",
         icon: "h-9 w-9",
       },
     },
