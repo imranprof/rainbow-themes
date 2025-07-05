@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="inner-container">
       <TopBar />
-      <div className="flex justify-between pb-[13px] mt-[12px]">
+      <div className="flex justify-between pb-[13px] mt-[12px] border-b border-border-4/10">
         <span className="flex gap-[15px] items-center">
           <span className="border-e border-border-3/15 pe-[14px]">
             <img src="/assets/imgs/icon/lines.png" alt="lines-icon" className="h-5 w-5" />
