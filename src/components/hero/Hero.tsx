@@ -2,6 +2,9 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { LiaPhoneVolumeSolid } from "react-icons/lia";
 import { FaPlay } from "react-icons/fa6";
+import { buttonVariants } from "../ui/button";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
   return (
@@ -10,7 +13,7 @@ const Hero = () => {
         <div className="content_left">
           <div className="">
             <div className="title_wrapper relative max-w-[1007px]">
-              <h1 className="text-text text-[100px] leading-[110%] tracking-[-2%] font-semibold inline">
+              <h1 className="text-text text-[clamp(32px,8vw,100px)] leading-[110%] tracking-[-2%] font-semibold inline">
                 We shape the future of{" "}
                 <span className="bg-[linear-gradient(90deg,_#5163FF_8.38%,_#C872F2_35.8%,_#FE71B9_59.75%)] bg-clip-text text-transparent">
                   business
@@ -21,14 +24,14 @@ const Hero = () => {
                 alt="rocket-icon"
                 width={92}
                 height={92}
-                className="inline-flex ms-[5px] mt-[-46px]"
+                className="lg:inline-flex ms-[5px] mt-[-46px] hidden"
               />
               <Image
                 src={"/assets/imgs/icon/celebrate.png"}
                 alt="celebrate-icon"
                 width={92}
                 height={92}
-                className="absolute top-[-50px] right-[-50px]"
+                className="absolute top-[-50px] right-[-50px] hidden lg:block"
               />
 
             </div>
@@ -41,9 +44,9 @@ const Hero = () => {
 
           <div className="bottom_left mt-[50px]">
             <div className="flex gap-[30px] items-center">
-              <Button variant={"primaryBlue"} className="text-white !px-10 !py-4 !text-[18px] !leading-[1.82] font-semibold font-primary">
+              <Link href={"#"} className={cn(buttonVariants({ variant: "primaryBlue" }), "text-white !px-10 !py-4 !text-[18px] !leading-[1.82] font-semibold font-primary")}>
                 Explore more
-              </Button>
+              </Link>
               <div className="flex items-center gap-[10px]">
                 <div className="icon w-[50px] h-[50px] flex justify-center items-center rounded-full border-[2px] border-border-2/10">
                   <LiaPhoneVolumeSolid className="text-text-3" />

@@ -1,6 +1,7 @@
 export type TAboutSection = {
   image1: string;
   image2: string;
+  exp_img: string;
   heading: string;
   description: string;
   features: string[];

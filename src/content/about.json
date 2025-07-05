@@ -2,6 +2,7 @@
   "aboutData": {
     "image1": "/assets/imgs/about/steptodown-23.png",
     "image2": "/assets/imgs/about/Image-2.png",
+    "exp_img": "/assets/imgs/about/Comapny_Experience.png",
     "heading": "All-in-one web solution for your business",
     "description": "We are creative agency, we are here to helping your business growth consectetur adipiscing.",
     "features": [
@@ -18,23 +19,23 @@
     },
     "stats": [
       {
-        "value": "99%",
+        "value": "99",
         "label": "Business Strategy"
       },
       {
-        "value": "80%",
+        "value": "80",
         "label": "Targeted Acquisition"
       },
       {
-        "value": "62K+",
+        "value": "62K",
         "label": "Complete Projects"
       },
       {
-        "value": "15K+",
+        "value": "15K",
         "label": "Happy Customers"
       },
       {
-        "value": "100+",
+        "value": "100",
         "label": "Consultant Advisors"
       }
     ]

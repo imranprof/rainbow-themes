@@ -1,6 +1,8 @@
 import TopBar from "@/components/header/TopBar"
-import { Button } from "../ui/button"
 import NavMenu from "./NavMenu"
+import Link from "next/link"
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "../ui/button"
 
 
 const Header = () => {
@@ -20,9 +22,9 @@ const Header = () => {
           </span>
         </span>
         <NavMenu />
-        <Button variant={"primaryBlue"} className="text-white px-5 py-3 rounded-[10px] text-[14px] leading-[1.25] tracking-[-1%]">
+        <Link href={"#"} className={cn(buttonVariants({ variant: "primaryBlue" }), "text-white px-5 py-3 rounded-[10px] text-[14px] leading-[1.25] tracking-[-1%]")} >
           Get a free quote
-        </Button>
+        </Link>
       </div>
     </header>
   )

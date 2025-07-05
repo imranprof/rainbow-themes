@@ -2,6 +2,11 @@ import { TAboutSection } from '@/types';
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import SectionTitle from "@/components/title/SectionTitle";
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
+import { buttonVariants } from '@/components/ui/button';
+
 
 type Props = {
   aboutData: TAboutSection;
@@ -10,10 +15,9 @@ type Props = {
 export default function About({ aboutData }: Props) {
   console.log(aboutData)
   return (
-    <section className="relative py-20 px-4 md:px-16">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-
-        <div className="relative w-full">
+    <section className="relative pt-[90px]">
+      <div className="inner-container grid lg:grid-cols-2 gap-[78px] ">
+        <div className="relative w-full xl:max-w-[575px]">
           <Image
             src={aboutData.image1}
             alt="Business Leader"
@@ -21,7 +25,7 @@ export default function About({ aboutData }: Props) {
             height={540}
             className="rounded-xl shadow-lg"
           />
-          <div className="absolute bottom-0 left-20 w-40 h-40 rounded-xl shadow-lg overflow-hidden border-4 border-white">
+          <div className="absolute bottom-[-10%] right-0 w-[308px] h-[360px] rounded-xl shadow-lg overflow-hidden border-4 border-white">
             <Image
               src={aboutData.image2}
               alt="Team Meeting"
@@ -30,69 +34,75 @@ export default function About({ aboutData }: Props) {
               className="object-cover"
             />
           </div>
-          <div className="absolute top-4 left-4 bg-white px-4 py-2 rounded-full border shadow text-xs font-medium">
-            <span className="text-purple-600 font-bold">30+</span> Years of Experience
+          <div className="w-[150px] h-[150px] xl:w-[215px] xl:h-[215px] absolute top-0 right-0 ">
+            <Image
+              src={aboutData.exp_img}
+              alt="Team Meeting"
+              width={430}
+              height={430}
+              className="object-cover "
+            />
           </div>
         </div>
 
         {/* Right - Content */}
         <div className="space-y-6">
-          <span className="inline-block px-3 py-1 text-sm font-medium bg-purple-100 text-purple-700 rounded-full">
+          <Link href={"#"} className="bg-[linear-gradient(90deg,_#708BFD_0%,_#FE71B9_100%)] text-white px-[14px] py-[6px] rounded-[48px]">
             Know about us
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            All-in-one web solution<br />for your business
-          </h2>
-          <p className="text-gray-500">
-            We are creative agency, we are here to helping your business growth consectetur adipiscing.
+          </Link>
+          <SectionTitle title={aboutData.heading} className="max-w-[550px]" />
+          <p className="">
+            {aboutData.description}
           </p>
-          <ul className="space-y-2 text-gray-700 text-sm">
-            <li>• There are many variations of passages available</li>
-            <li>• Majority have suffered alteration in some form</li>
-            <li>• Contrary to popular belief is not simply random</li>
+          <ul className="">
+            {aboutData.features.map((item, index) => (
+              <li className="leading-[2] text-[18px] text-text-2" key={index}><span className="inline-flex justify-center items-center w-[26px] h-[26px] bg-white shadow-md rounded-full me-[17px]"><span className="inline-block bg-text-3 h-2 w-2 rounded-full"></span></span> {item}</li>
+            ))}
+
           </ul>
 
           <div className="flex items-center space-x-4 mt-4">
-            <Button className="bg-purple-600 text-white">More about us</Button>
-            <div className="flex items-center space-x-2">
-              <Image
-                src="/images/ceo.png"
-                alt="CEO"
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
+            <Link href={"#"} className={cn(buttonVariants({ variant: "primaryBlue" }), "text-white px-10 py-4 rounded-[10px]")}>
+              {aboutData.cta.text}
+            </Link>
+            <div className="flex items-center">
+              <div className="p-[2px] rounded-full bg-gradient-to-b from-[#0F34F87A] to-[#091F9200] shadow-sm me-5">
+                <Image
+                  src={aboutData.ceoDetails.avatar}
+                  alt="ceo-avatar"
+                  width={60}
+                  height={60}
+                  className="rounded-full"
+                />
+              </div>
               <div>
-                <p className="text-sm font-semibold">Bruno Ashik</p>
-                <p className="text-xs text-gray-500">CEO at Company</p>
+                <Image
+                  src={aboutData.ceoDetails.signature}
+                  alt="ceo-signature"
+                  width={130}
+                  height={59}
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Stats Section */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-20 text-center">
-        <div>
-          <h3 className="text-3xl font-bold text-purple-600">99%</h3>
-          <p className="text-sm text-gray-500">Business Strategy</p>
-        </div>
-        <div>
-          <h3 className="text-3xl font-bold text-purple-600">80%</h3>
-          <p className="text-sm text-gray-500">Targeted Acquisition</p>
-        </div>
-        <div>
-          <h3 className="text-3xl font-bold text-purple-600">62k+</h3>
-          <p className="text-sm text-gray-500">Complete Projects</p>
-        </div>
-        <div>
-          <h3 className="text-3xl font-bold text-purple-600">15k+</h3>
-          <p className="text-sm text-gray-500">Happy Customers</p>
-        </div>
-        <div className="col-span-2 sm:col-span-1">
-          <h3 className="text-3xl font-bold text-purple-600">100+</h3>
-          <p className="text-sm text-gray-500">Consultant Advisors</p>
-        </div>
+      <div className="grid grid-cols-3 xl:grid-cols-5 gap-x-[91px] gap-y-5 mt-[100px] text-center inner-container">
+        {aboutData.stats.map((item, index) => (
+          <div key={index}>
+            <h3 className="text-[clamp(40px,6vw,80px)] text-text leading-[1.25] pt-5 border-t border-border-2/15 ">
+              {item.value}
+              {(index === 0 || index === 1) ? (
+                <span className="text-[clamp(24px,4vw,50px)] ">%</span>
+              ) : (
+                <span className="text-[clamp(24px,4vw,50px)] ">+</span>
+              )}
+            </h3>
+            <p className="text-text-2">{item.label}</p>
+          </div>
+        ))}
+
       </div>
     </section>
   );
