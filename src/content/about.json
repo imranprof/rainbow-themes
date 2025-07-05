@@ -1,0 +1,42 @@
+{
+  "aboutData": {
+    "image1": "/assets/imgs/about/steptodown-23.png",
+    "image2": "/assets/imgs/about/Image-2.png",
+    "heading": "All-in-one web solution for your business",
+    "description": "We are creative agency, we are here to helping your business growth consectetur adipiscing.",
+    "features": [
+      "There are many variations of passages available",
+      "Majority have suffered alteration in some form",
+      "Contrary to popular belief is not simply random"
+    ],
+    "cta": {
+      "text": "More about us"
+    },
+    "ceoDetails": {
+      "avatar": "/assets/imgs/about/ceo.png",
+      "signature": "/assets/imgs/about/Signatures.png"
+    },
+    "stats": [
+      {
+        "value": "99%",
+        "label": "Business Strategy"
+      },
+      {
+        "value": "80%",
+        "label": "Targeted Acquisition"
+      },
+      {
+        "value": "62K+",
+        "label": "Complete Projects"
+      },
+      {
+        "value": "15K+",
+        "label": "Happy Customers"
+      },
+      {
+        "value": "100+",
+        "label": "Consultant Advisors"
+      }
+    ]
+  }
+}
