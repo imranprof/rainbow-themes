@@ -1,0 +1,51 @@
+{
+  "servicesSection": {
+    "heading": "Our Services",
+    "cta1": {
+      "text": "What we do",
+      "url": "#"
+    },
+    "cta2": {
+      "text": "View All Services",
+      "url": "#"
+    },
+    "cards": [
+      {
+        "title": "Digital Marketing",
+        "description": "Where we specialize in transforming your vision into unforgettable experiences, Win3 passion for perfection and an eye for detail our dedicated team of ever.",
+        "cta": {
+          "text": "View Details",
+          "url": "#"
+        },
+        "image": "/assets/imgs/service/digital-m-1.png"
+      },
+      {
+        "title": "Business Strategy",
+        "description": "Where we specialize in transforming your vision into unforgettable experiences, Win3 passion for perfection and an eye for detail our dedicated team of ever.",
+        "cta": {
+          "text": "View Details",
+          "url": "#"
+        },
+        "image": "/assets/imgs/service/business-1.png"
+      },
+      {
+        "title": "Finance Consultant",
+        "description": "Where we specialize in transforming your vision into unforgettable experiences, Win3 passion for perfection and an eye for detail our dedicated team of ever.",
+        "cta": {
+          "text": "View Details",
+          "url": "#"
+        },
+        "image": "/assets/imgs/service/finance-1.png"
+      },
+      {
+        "title": "One-to-one Consulting",
+        "description": "Where we specialize in transforming your vision into unforgettable experiences, Win3 passion for perfection and an eye for detail our dedicated team of ever.",
+        "cta": {
+          "text": "View Details",
+          "url": "#"
+        },
+        "image": "/assets/imgs/service/consulting-1.png"
+      }
+    ]
+  }
+}

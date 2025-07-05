@@ -13,9 +13,8 @@ type Props = {
 }
 
 export default function About({ aboutData }: Props) {
-  console.log(aboutData)
   return (
-    <section className="relative pt-[90px]">
+    <section className="relative pt-[90px] pb-[100px]">
       <div className="inner-container grid lg:grid-cols-2 gap-[78px] ">
         <div className="relative w-full xl:max-w-[575px]">
           <Image

@@ -17,3 +17,25 @@ export type TAboutSection = {
     label: string;
   }[];
 };
+
+export type TServicesSection = {
+  heading: string;
+  cta1: {
+    text: string;
+    url: string;
+  };
+  cta2: {
+    text: string;
+    url: string;
+  };
+  cards: {
+    title: string;
+    description: string;
+    cta: {
+      text: string;
+      url: string;
+    };
+    image: string;
+  }[];
+};
+
