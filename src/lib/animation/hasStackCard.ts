@@ -25,7 +25,7 @@ export const hasStackCard = (
       scrollTrigger: {
         trigger: stackRef.current,
         start: "top top-=15%",
-        end: `+=${cardCount * 300}`,
+        end: `+=${cardCount * 500}`,
         scrub: 1,
         pin: true,
         // markers: true,
@@ -35,7 +35,7 @@ export const hasStackCard = (
     for (let i = 1; i < cardCount; i++) {
         tl.to(cardsRef.current[i], {
           yPercent: i * 15,
-          duration: 0.5,
+          duration: 1,
           ease: "power2.out",
         })
 
