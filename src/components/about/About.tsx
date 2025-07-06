@@ -44,7 +44,6 @@ export default function About({ aboutData }: Props) {
           </div>
         </div>
 
-        {/* Right - Content */}
         <div className="space-y-6">
           <Link href={"#"} className="bg-[linear-gradient(90deg,_#708BFD_0%,_#FE71B9_100%)] text-white px-[14px] py-[6px] rounded-[48px]">
             Know about us

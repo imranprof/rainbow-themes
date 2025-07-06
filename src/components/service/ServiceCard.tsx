@@ -1,5 +1,7 @@
 
 import Image from "next/image";
+import SectionTitle from "../title/SectionTitle";
+import Link from "next/link";
 type Props = {
   title: string;
   description: string;
@@ -8,13 +10,14 @@ type Props = {
     url: string;
   };
   image: string;
+  serial: number;
 }
 
-const ServiceCard = ({ title, description, cta, image }: Props) => {
+const ServiceCard = ({ title, description, cta, image, serial }: Props) => {
   return (
-    <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 bg-gradient-to-br from-[#f8f9fc] to-[#ffffff] rounded-2xl p-6 md:p-10 shadow-md max-w-5xl mx-auto">
+    <div className="flex flex-col md:flex-row gap-[30px] md:gap-[60px] items-center  rounded-xl p-6 md:p-[50px] shadow-md w-full bg-white">
 
-      <div className="w-full md:w-1/2">
+      <div className="w-full h-auto lg:w-[414px] lg:h-[345px] overflow-hidden">
         <Image
           src={image}
           alt="Digital Marketing"
@@ -25,19 +28,18 @@ const ServiceCard = ({ title, description, cta, image }: Props) => {
       </div>
 
 
-      <div className="w-full md:w-1/2">
-        <span className="inline-block text-sm text-indigo-700 bg-indigo-100 px-3 py-1 rounded-full mb-2">
-          Service-1
+      <div className="w-full md:w-1/2 max-w-[604px]">
+        <span className="inline-block bg-background-4  px-[15px] py-[10px] rounded-full mb-[10px]">
+          <span className="text-[14px] font-medium bg-[linear-gradient(102.44deg,_#5163FF_-0.32%,_#FE71B9_100%)] bg-clip-text text-transparent">
+            Service-{serial}</span>
         </span>
-        <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
-          {title}
-        </h3>
-        <p className="text-gray-500 mb-6 leading-relaxed">
+        <SectionTitle title={title} />
+        <p className="mt-[10px] mb-5">
           {description}
         </p>
-        <button className="border border-gray-300 rounded-md px-5 py-2 text-sm font-medium hover:bg-gray-100 transition">
+        <Link href={"#"} className="inline-block border-[2px] border-gray-300 rounded-[10px] px-7 py-4 text-[15px] text-text-2 font-semibold hover:bg-gray-100 transition">
           Read Details
-        </button>
+        </Link>
       </div>
     </div>
   );

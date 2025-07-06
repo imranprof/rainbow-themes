@@ -17,7 +17,12 @@ const config: Config = {
   			'border-2': '#00234B',
   			'border-3': '#2A303D',
   			'border-4': '#5163FF',
-  			background: 'hsl(var(--background))',
+  			background: {
+          DEFAULT: "var(--background)",
+          2: "var(--background2)",
+          3: "var(--background3)",
+          4: "var(--background4)",
+        },
   			text: {
   				'2': 'var(--text2)',
   				'3': 'var(--text3)',
