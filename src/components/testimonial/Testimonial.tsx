@@ -19,7 +19,6 @@ type Props = {
 export default function Testimonial({ testimonials }: Props) {
   return (
     <section className="relative py-16 px-4 overflow-hidden bg-[linear-gradient(90deg,_#dccffd_0%,_#ffffff_55%,_#ffffff_100%)] ">
-
       <div className="relative max-w-[744px] mx-auto inner-container">
         <Carousel className="w-full max-w-3xl mx-auto">
           <CarouselContent>
@@ -71,8 +70,8 @@ export default function Testimonial({ testimonials }: Props) {
             ))}
           </CarouselContent>
 
-          <CarouselPrevious className="left-[-80px] bg-white hover:bg-[linear-gradient(102.44deg,_#5163FF_-0.32%,_#FE71B9_100%)] hover:text-white text-text border border-border-2/15 shadow-lg transition-all duration-300 w-[60px] h-[60px]" />
-          <CarouselNext className="right-[-80px] bg-white hover:bg-[linear-gradient(102.44deg,_#5163FF_-0.32%,_#FE71B9_100%)] hover:text-white text-text border border-border-2/15 shadow-lg transition-all duration-300 w-[60px] h-[60px]" />
+          <CarouselPrevious className="left-[-10px] lg:left-[-80px] bg-white hover:bg-[linear-gradient(102.44deg,_#5163FF_-0.32%,_#FE71B9_100%)] hover:text-white text-text border border-border-2/15 shadow-lg transition-all duration-300 w-[40px] h-[40px] lg:w-[60px] lg:h-[60px]" />
+          <CarouselNext className="right-[-10px] lg:right-[-80px] bg-white hover:bg-[linear-gradient(102.44deg,_#5163FF_-0.32%,_#FE71B9_100%)] hover:text-white text-text border border-border-2/15 shadow-lg transition-all duration-300 w-[40px] h-[40px] lg:w-[60px] lg:h-[60px]" />
         </Carousel>
       </div>
     </section>

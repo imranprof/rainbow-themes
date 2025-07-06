@@ -36,7 +36,7 @@ const Service = ({ serviceData }: Props) => {
   );
 
   return (
-    <div ref={containerRef}>
+    <section ref={containerRef}>
       <div className="pt-[100px] pb-[120px] bg-[linear-gradient(135deg,_#FFF9FC_0%,_#FCFCFD_100%)] " ref={stackRef}>
         <div className="inner-container" >
           <div className="ct1_1 text-center">
@@ -66,7 +66,7 @@ const Service = ({ serviceData }: Props) => {
         </div>
 
       </div>
-    </div>
+    </section>
   )
 }
 
