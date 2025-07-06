@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import "@/styles/utils/_typography.css";
 import Header from "@/components/header/Header";
+import ScrollSmootherComponent from "@/components/tools/ScrollSmootherComp";
 
 
 export const metadata: Metadata = {
@@ -18,9 +19,16 @@ export default function RootLayout({
     <html lang="en">
       <body
         className=""
-      >
-        <Header />
-        {children}
+      ><div>
+          <ScrollSmootherComponent />
+          <div id="smooth-wrapper">
+            <div id="smooth-content">
+              <Header />
+              {children}
+            </div>
+          </div>
+        </div>
+
       </body>
     </html>
   );
