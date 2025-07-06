@@ -1,3 +1,5 @@
+"use client"
+
 import { TAboutSection } from '@/types';
 
 import Image from 'next/image';
@@ -6,6 +8,9 @@ import SectionTitle from "@/components/title/SectionTitle";
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
+import { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+import hasCountAnim from '@/lib/animation/hasCountAnim';
 
 
 type Props = {
@@ -13,8 +18,16 @@ type Props = {
 }
 
 export default function About({ aboutData }: Props) {
+  const containerRef = useRef<HTMLDivElement>(null!);
+
+  useGSAP(
+    () => {
+      hasCountAnim();
+    },
+    { scope: containerRef }
+  );
   return (
-    <section className="relative pt-[90px] pb-[100px]">
+    <section className="relative pt-[90px] pb-[100px]" ref={containerRef}>
       <div className="inner-container grid lg:grid-cols-2 gap-[78px] ">
         <div className="relative w-full xl:max-w-[575px]">
           <Image
@@ -89,10 +102,10 @@ export default function About({ aboutData }: Props) {
       <div className="grid grid-cols-3 xl:grid-cols-5 gap-x-[91px] gap-y-5 mt-[100px] text-center inner-container">
         {aboutData.stats.map((item, index) => (
           <div key={index}>
-            <h3 className="text-[clamp(40px,6vw,80px)] text-text leading-[1.25] pt-5 border-t border-border-2/15 ">
-              {item.value}
+            <h3 className={cn("text-[clamp(40px,6vw,80px)] text-text leading-[1.25] pt-5 border-t border-border-2/15")}>
+              <span data-count={item.value} className={cn("", (index <= 1 || index === 4) && "has_count_anim")}>{item.value}</span>
               {(index === 0 || index === 1) ? (
-                <span className="text-[clamp(24px,4vw,50px)] ">%</span>
+                <span className="text-[clamp(24px,4vw,50px)]">%</span>
               ) : (
                 <span className="text-[clamp(24px,4vw,50px)] ">+</span>
               )}
