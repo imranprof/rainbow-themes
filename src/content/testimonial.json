@@ -1,0 +1,25 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "Simply dummy text of the printing and Expert Advisor. lorem ipsum has been the standard dummy text ever since the when an unknown printer took a galley of type and scrambled.",
+      "author": "Bm Ashik",
+      "role": "UI/UX Designer",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "quote": "Outstanding service and exceptional quality. The team delivered beyond our expectations and provided innovative solutions that transformed our business.",
+      "author": "Sarah Johnson",
+      "role": "Product Manager",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "quote": "Professional, reliable, and creative. Working with this team has been a game-changer for our digital presence and user experience.",
+      "author": "Michael Chen",
+      "role": "Tech Lead",
+      "rating": 5
+    }
+  ]
+}

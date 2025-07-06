@@ -39,3 +39,13 @@ export type TServicesSection = {
   }[];
 };
 
+type TTestimonialSection = {
+  testimonials: {
+    id: number;
+    quote: string;
+    author: string;
+    role: string;
+    rating: number;
+  }[];
+};
+
