@@ -21,7 +21,7 @@ const Hero = () => {
     { scope: containerRef }
   );
   return (
-    <section className="pt-[71px] relative pb-[157px] overflow-hidden" ref={containerRef}>
+    <section className="pt-[71px] relative pb-[70px] lg:pb-[157px] overflow-hidden" ref={containerRef}>
       <div className="inner-container">
         <div className="content_left">
           <div className="">
@@ -88,9 +88,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="relative xl:absolute bottom-[-54px] right-[-60px]">
+      <div className="relative xl:absolute bottom-[-54px] xl:right-[-60px]">
         <div
-          className="w-[1000px] h-[507px] 2xl:w-[1100px] 2xl:h-[607px]"
+          className="w-full h-auto lg:w-[1000px] lg:h-[507px] 2xl:w-[1100px] 2xl:h-[607px]"
           style={{
             WebkitMaskImage: "url('/assets/imgs/hero/Banner_Img.png')",
             WebkitMaskSize: 'cover',
@@ -111,9 +111,9 @@ const Hero = () => {
           />
         </div>
 
-        <div className="h-[175px] w-[175px] absolute top-[-15%] right-[38.6%] rounded-full flex justify-center items-center">
+        <div className="h-[70px] w-[70px] md:h-[100px] md:w-[100px] xl:h-[175px] xl:w-[175px] absolute top-[-10%] right-[39.6%]  lg:right-[42.6%] xl:top-[-19%] xl:right-[37.6%] 2xl:top-[-15%] 2xl:right-[38.6%] rounded-full flex justify-center items-center">
           <Image width={175} height={175} src={"/assets/imgs/icon/Circle-Text.png"} alt="" className="absolute top-0 left-0" />
-          <Button className="w-[60px] h-[60px] rounded-full bg-[linear-gradient(180deg,_#708BFD_0%,_#FE71B9_100%)]">
+          <Button className="w-[30px] h-[30px] xl:w-[60px] xl:h-[60px] rounded-full bg-[linear-gradient(180deg,_#708BFD_0%,_#FE71B9_100%)]">
             <FaPlay className="text-white" />
           </Button>
         </div>

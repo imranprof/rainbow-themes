@@ -29,7 +29,7 @@ export default function About({ aboutData }: Props) {
     { scope: containerRef }
   );
   return (
-    <section className="relative pt-[90px] pb-[100px]" ref={containerRef}>
+    <section className="relative pt-[40px] lg:pt-[90px] pb-[100px]" ref={containerRef}>
       <div className="inner-container grid lg:grid-cols-2 gap-[78px] ">
         <div className="relative w-full xl:max-w-[575px]">
           <Image
