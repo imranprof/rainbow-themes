@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { LiaPhoneVolumeSolid } from "react-icons/lia";
@@ -5,27 +7,40 @@ import { FaPlay } from "react-icons/fa6";
 import { buttonVariants } from "../ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { useGSAP } from "@gsap/react";
+import hasScaleAnim from "@/lib/animation/hasScaleAnim";
+import { useRef } from "react";
 
 const Hero = () => {
+  const containerRef = useRef<HTMLDivElement>(null!);
+
+  useGSAP(
+    () => {
+      hasScaleAnim();
+    },
+    { scope: containerRef }
+  );
   return (
-    <section className="pt-[71px] relative pb-[157px] overflow-hidden">
+    <section className="pt-[71px] relative pb-[157px] overflow-hidden" ref={containerRef}>
       <div className="inner-container">
         <div className="content_left">
           <div className="">
-            <div className="title_wrapper relative max-w-[1007px]">
-              <h1 className="text-text text-[clamp(32px,8vw,100px)] leading-[110%] tracking-[-2%] font-semibold inline">
-                We shape the future of{" "}
-                <span className="bg-[linear-gradient(90deg,_#5163FF_8.38%,_#C872F2_35.8%,_#FE71B9_59.75%)] bg-clip-text text-transparent">
-                  business
-                </span>
-              </h1>
-              <Image
-                src={"/assets/imgs/icon/Rocket-small.png"}
-                alt="rocket-icon"
-                width={92}
-                height={92}
-                className="lg:inline-flex ms-[5px] mt-[-46px] hidden"
-              />
+            <div className="title_wrapper relative max-w-[1007px] ">
+              <div className="has_scale_anim">
+                <h1 className="text-text text-[clamp(32px,8vw,100px)] leading-[110%] tracking-[-2%] font-semibold inline ">
+                  We shape the future of{" "}
+                  <span className="bg-[linear-gradient(90deg,_#5163FF_8.38%,_#C872F2_35.8%,_#FE71B9_59.75%)] bg-clip-text text-transparent">
+                    business
+                  </span>
+                </h1>
+                <Image
+                  src={"/assets/imgs/icon/Rocket-small.png"}
+                  alt="rocket-icon"
+                  width={92}
+                  height={92}
+                  className="lg:inline-flex ms-[5px] mt-[-46px] hidden"
+                />
+              </div>
               <Image
                 src={"/assets/imgs/icon/celebrate.png"}
                 alt="celebrate-icon"

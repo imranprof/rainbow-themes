@@ -11,6 +11,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { hasStackCard } from "@/lib/animation/hasStackCard";
+import hasScaleAnim from "@/lib/animation/hasScaleAnim";
 
 type Props = {
   serviceData: TServicesSection;
@@ -28,7 +29,8 @@ const Service = ({ serviceData }: Props) => {
   useGSAP(
     () => {
 
-      hasStackCard(stackRef, cardsRef, serviceData.cards.length)
+      hasStackCard(stackRef, cardsRef, serviceData.cards.length);
+      hasScaleAnim();
     },
     { scope: containerRef }
   );
@@ -43,7 +45,7 @@ const Service = ({ serviceData }: Props) => {
             </Link>
           </div>
           <div className="heading text-center mx-auto mt-5">
-            <SectionTitle title={serviceData.heading} />
+            <SectionTitle title={serviceData.heading} animation="has_scale_anim" />
           </div>
           <div className="mt-[70px] grid gap-[30px] relative">
             {serviceData.cards.map((item, index) => (

@@ -11,6 +11,7 @@ import { buttonVariants } from '@/components/ui/button';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import hasCountAnim from '@/lib/animation/hasCountAnim';
+import hasScaleAnim from '@/lib/animation/hasScaleAnim';
 
 
 type Props = {
@@ -23,6 +24,7 @@ export default function About({ aboutData }: Props) {
   useGSAP(
     () => {
       hasCountAnim();
+      hasScaleAnim();
     },
     { scope: containerRef }
   );
@@ -61,7 +63,7 @@ export default function About({ aboutData }: Props) {
           <Link href={"#"} className="bg-[linear-gradient(90deg,_#708BFD_0%,_#FE71B9_100%)] text-white px-[14px] py-[6px] rounded-[48px]">
             Know about us
           </Link>
-          <SectionTitle title={aboutData.heading} className="max-w-[550px]" />
+          <SectionTitle title={aboutData.heading} className="max-w-[550px]" animation="has_scale_anim" />
           <p className="">
             {aboutData.description}
           </p>
