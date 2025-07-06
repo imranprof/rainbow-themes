@@ -48,7 +48,7 @@ const Service = ({ serviceData }: Props) => {
           <div className="mt-[70px] grid gap-[30px] relative">
             {serviceData.cards.map((item, index) => (
               <div key={index}>
-                <div className={cn("absolute top-0 left-0 w-full", index === 0 && "relative")} ref={el => { cardsRef.current[index] = el; }}>
+                <div className={cn("relative top-0 left-0 w-full", index > 0 && "lg:absolute")} ref={el => { cardsRef.current[index] = el; }}>
                   <div className="absolute top-[-40px] left-0 w-full h-[50px] blur-md shadow-md z-[-1] bg-[#F6F7FF]/60 rounded-xl" />
                   <ServiceCard {...item} serial={index + 1} />
                 </div>
@@ -56,7 +56,7 @@ const Service = ({ serviceData }: Props) => {
 
             ))}
           </div>
-          <div className="text-center mt-10 lg:mt-[200px]">
+          <div className="text-center mt-10 lg:mt-[200px] relative z-[1000]">
             <Link href={serviceData.cta2.url} className={cn(buttonVariants({ variant: "primaryBlue" }), "text-white px-10 py-4 rounded-[10px]")}>
               {serviceData.cta2.text}
             </Link>

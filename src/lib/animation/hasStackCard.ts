@@ -8,43 +8,42 @@ export const hasStackCard = (
   cardsRef: React.RefObject<Array<HTMLDivElement | null>>,
   cardCount: number
 ) => {
-  if (!stackRef.current || !cardsRef.current || cardsRef.current.length === 0) return;
+  const mm = gsap.matchMedia();
 
-  cardsRef.current.forEach((card, idx) => {
-    if (card) {
-      gsap.set(card, {
-        yPercent: idx === 0 ? 0 : 200,
-        scale: 1,
-      });
+  mm.add("(min-width: 1024px)", () => {
+    if (!stackRef.current || !cardsRef.current || cardsRef.current.length === 0)
+      return;
+    cardsRef.current.forEach((card, idx) => {
+      if (card && idx > 0) {
+        gsap.set(card, {
+          yPercent: 150,
+        });
+      }
+    });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: stackRef.current,
+        start: "top top-=15%",
+        end: `+=${cardCount * 300}`,
+        scrub: 1,
+        pin: true,
+        // markers: true,
+      },
+    });
+
+    for (let i = 1; i < cardCount; i++) {
+        tl.to(cardsRef.current[i], {
+          yPercent: i * 15,
+          duration: 0.5,
+          ease: "power2.out",
+        })
+
+          .to(cardsRef.current[i - 1], {
+            scale: .6 + (i * 0.1),
+            duration: 0.5,
+            ease: "power2.out",
+          }, `<`);
     }
   });
-
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: stackRef.current,
-      start: "top top-=15%",
-      end: `+=${cardCount * 300}`,
-      scrub: 1,
-      pin: true,
-      // markers: true,
-    },
-  });
-
-  for (let i = 1; i < cardCount; i++) {
-    const currentCard = cardsRef.current[i];
-    const prevCard = cardsRef.current[i - 1];
-
-    if (currentCard && prevCard) {
-      tl.to(currentCard, {
-        yPercent: i * 15,
-        opacity: 1,
-        duration: 0.5,
-        ease: "power2.out",
-      }).to(prevCard, {
-        scale: 0.6 + i * 0.1,
-        duration: 0.5,
-        ease: "power2.out",
-      }, "<");
-    }
-  }
 };
