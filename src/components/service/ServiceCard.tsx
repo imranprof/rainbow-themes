@@ -15,7 +15,7 @@ type Props = {
 
 const ServiceCard = ({ title, description, cta, image, serial }: Props) => {
   return (
-    <div className="flex flex-col md:flex-row gap-[30px] md:gap-[60px] items-center  rounded-xl p-6 md:p-[50px] shadow-md w-full bg-white">
+    <div className="flex flex-col md:flex-row gap-[30px] md:gap-[60px] items-center  rounded-xl p-6 md:p-[50px] shadow-md w-full bg-white ">
 
       <div className="w-full h-auto lg:w-[414px] lg:h-[345px] overflow-hidden">
         <Image

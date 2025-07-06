@@ -12,6 +12,7 @@ export default function Home() {
       <TextSlider />
       <About aboutData={about.aboutData} />
       <Service serviceData={service.servicesSection} />
+      <div className="w-[90vw] h-[100vh]"></div>
     </main>
   );
 }
